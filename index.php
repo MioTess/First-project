@@ -63,6 +63,7 @@
             }
             if($Sname == 'admin'){
               $Sname = true;
+              $_SESSION['admins'] = 'admin';
             }
             if($Sname && $Spass == 'admin'){
               header("Location: admin.php");

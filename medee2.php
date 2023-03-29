@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>Мэдээ оруулах</title>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -18,7 +17,8 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="admin.php">Үндсэн цэс</a></li>
-      <li class="active"><a href="setgegdel.php">Сэтгэгдэл үзэх</a></li>
+      <li ><a href="setgegdel.php">Сэтгэгдэл үзэх</a></li>
+      <li class="active"><a href="medee.php">Мэдээ үзэх</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Сонирхолтой зүйлс
         <span class="caret"></span></a>
@@ -28,28 +28,41 @@
         </ul>
       </li>
     </ul>
-    <button class="btn btn-danger navbar-btn"><a href="index.php" style = "color : white">Гарах</a></button>
+    <button class="btn btn-danger navbar-btn"  ><a href="index.php" class="link-light" style = "color : white">Гарах</a></button>
   </div>
 </nav>
+ <br>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Бидэнд ирсэн сэтгэгдлүүд</h1>
-            <?php
-            include 'connect.php';
-            $sql = "SELECT * FROM comment";
-            $result = mysqli_query($con,$sql);
-            if($result){
-                while($row=mysqli_fetch_assoc($result)){
-                    $comment = $row['comment'];
-                    echo ' <p>'.$comment.'</p>';
-                }
-                
-            }
-            ?>
-           
-        </div>
+<!--Medee-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Таны оруулсан мэдээлэл</h3>
+
+      <table class="table">
+  <thead>
+   <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Хэрэглэгч ID</th>
+      <th scope="col">Гарчиг</th>
+      <th scope="col">Мэдээ</th>
+      <th scope="col">Төлөв</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    include 'medeeGargah.php';
+    ?>
+    </tbody>
     </div>
+    <div class="col-sm-6">
+      <h3>Шинэ мэдээлэл</h3>
+      <textarea class="form-control" rows="13" id="comment" name="comment"></textarea> <br>
+      <input type="submit" value="Илгээх" class ="btn-primary" name="submit" style ="margin-left: 4cm">
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

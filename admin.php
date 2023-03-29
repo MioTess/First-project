@@ -55,9 +55,7 @@
             <td>'.$Aimag.'</td>
             <td>'.$TursunOgnoo.'</td>
             <td>'.$Utas.'</td>
-            <td>
-            <button class="btn btn-primary"><a href="" class="text-light">Данс үүсгэх</a></button>
-        </td>
+           
             <td>
             <button class="btn btn-danger"><a href="delete.php?deleteid='.$id.'" class="text-light">Устгах</a></button>
         </td>

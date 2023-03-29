@@ -16,8 +16,9 @@
       <a class="navbar-brand" href="#">Админ-Сайн байна уу ?</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Үндсэн цэс</a></li>
+      <li class="active"><a href="admin.php">Үндсэн цэс</a></li>
       <li><a href="setgegdel.php">Сэтгэгдэл үзэх</a></li>
+      <li><a href="medee2.php">Мэдээ үзэх</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Сонирхолтой зүйлс
         <span class="caret"></span></a>
@@ -27,7 +28,7 @@
         </ul>
       </li>
     </ul>
-    <button class="btn btn-danger navbar-btn">Гарах</button>
+    <button class="btn btn-danger navbar-btn"><a href="index.php" style = "color : white">Гарах</a></button>
   </div>
 </nav>
 </body>

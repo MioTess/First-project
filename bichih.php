@@ -27,7 +27,7 @@
         </ul>
       </li>
     </ul>
-    
+    <button class="btn btn-danger navbar-btn"><a href="index.php" style = "color : white">Гарах</a></button>
   </div>
 </nav>
 
